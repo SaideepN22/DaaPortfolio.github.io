@@ -32,27 +32,34 @@ header {
 }
 
 header .logo {
-    color: var(--primary-color);
-    font-weight: 600;
-    font-size: 1.5em;
-    flex: 1;
+  color: var(--primary);
+  margin-right: 130px;
+  font-weight: 600;
+  letter-spacing: 2px;
 }
 
-header nav ul {
-    list-style: none;
-    display: flex;
-    gap: 20px;
+header ul {
+  display: flex;
+  list-style: none;
 }
 
-header nav ul li a {
-    color: var(--text-color);
-    text-decoration: none;
-    font-weight: 500;
-    transition: color 0.3s;
+header ul li {
+  margin-right: 30px;
 }
 
-header nav ul li a:hover {
-    color: var(--primary-color);
+header ul li a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 600;
+  padding: 0; /* Remove padding */
+  border: none; /* Remove border */
+  background: none; /* Remove background */
+  transition: none; /* Remove transition */
+}
+
+header ul li a:hover {
+  color: var(--primary); /* Change text color on hover */
+  background: none; /* Ensure no background is added */
 }
 
 .hero-section {

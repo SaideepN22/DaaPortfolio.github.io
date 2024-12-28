@@ -22,6 +22,7 @@ header {
     background-color: var(--background-color);
     display: flex;
     justify-content: space-between;
+    align-items: center;
     padding: 20px 40px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
     z-index: 1000;
@@ -33,20 +34,20 @@ header .logo {
     font-size: 1.5em;
 }
 
-header ul {
+header nav ul {
     list-style: none;
     display: flex;
     gap: 20px;
 }
 
-header ul li a {
+header nav ul li a {
     color: var(--text-color);
     text-decoration: none;
     font-weight: 500;
     transition: color 0.3s;
 }
 
-header ul li a:hover {
+header nav ul li a:hover {
     color: var(--primary-color);
 }
 
@@ -57,8 +58,17 @@ header ul li a:hover {
     color: var(--text-color);
 }
 
+.hero-section h1 {
+    font-size: 36px;
+}
+
 .hero-section span {
     color: var(--primary-color);
+}
+
+.hero-section p {
+    font-size: 20px;
+    margin-top: 20px;
 }
 
 .about-section, .projects-section {
@@ -71,6 +81,7 @@ header ul li a:hover {
     display: flex;
     gap: 20px;
     justify-content: center;
+    flex-wrap: wrap; /* Allow wrapping for smaller screens */
 }
 
 .project-card {
@@ -80,6 +91,7 @@ header ul li a:hover {
     text-align: center;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
     transition: transform 0.3s, box-shadow 0.3s;
+    width: calc(33.33% - 20px); /* 3 cards per row */
 }
 
 .project-card:hover {
@@ -93,4 +105,56 @@ footer {
     background: var(--background-color);
     color: gray;
     font-size: 0.9em;
+}
+
+footer a {
+    color: var(--primary-color);
+    text-decoration: none;
+}
+
+footer a:hover {
+    color: var(--hover-color);
+}
+
+/* Media queries for responsiveness */
+@media (max-width: 768px) {
+    header {
+        padding: 15px 20px;
+    }
+
+    .hero-section {
+        padding: 80px 20px;
+    }
+
+    .project-cards {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .project-card {
+        width: 100%; /* Full width for each card */
+    }
+}
+
+@media (max-width: 480px) {
+    header .logo {
+        font-size: 1.2em;
+    }
+
+    header nav ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .hero-section h1 {
+        font-size: 2em;
+    }
+
+    .about-section, .projects-section {
+        padding: 40px 10px;
+    }
+
+    .project-card {
+        width: 100%; /* Full width for each card */
+    }
 }

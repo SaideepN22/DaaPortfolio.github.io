@@ -16,11 +16,3 @@ navLinks.forEach(link => {
         });
     });
 });
-
-// External link alerts
-const externalLinks = document.querySelectorAll(".about-section ul li button");
-externalLinks.forEach(button => {
-    button.addEventListener("click", function () {
-        alert("You are leaving the website. The link will open in a new tab.");
-    });
-});

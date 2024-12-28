@@ -14,11 +14,13 @@ body {
     background-color: var(--background-color);
     color: var(--text-color);
     scroll-behavior: smooth;
+    padding-top: 80px; /* Adjust padding to prevent header overlap */
 }
 
 header {
     position: fixed;
     top: 0;
+    left: 0;
     width: 100%;
     background-color: var(--background-color);
     display: flex;
@@ -59,6 +61,7 @@ header nav ul li a:hover {
     padding: 100px 20px;
     background: var(--background-color);
     color: var(--text-color);
+    margin-top: 80px; /* Ensure that the content is below the header */
 }
 
 .hero-section h1 {

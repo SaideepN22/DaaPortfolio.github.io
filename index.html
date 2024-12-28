@@ -1,39 +1,64 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio</title>
+    <meta name="description" content="Portfolio of J Nithish, a passionate web developer skilled in web development, C++, Python, JavaScript, and algorithms.">
+    <meta name="keywords" content="J Nithish, portfolio, web developer, DAA project, KLE Technological University">
+    <meta name="author" content="J Nithish">
+    <meta property="og:title" content="J Nithish - Web Developer Portfolio">
+    <meta property="og:description" content="Explore my skills, project, and contact details.">
+    <meta property="og:image" content="your-image-link-here.jpg">
+    <meta property="og:url" content="your-portfolio-link">
+    <title>Nithish - Portfolio</title>
+
+    <!-- Font Awesome icons -->
+    <script src="https://kit.fontawesome.com/a9cdbedf57.js" crossorigin="anonymous"></script>
+
+    <!-- Styling CSS -->
     <link rel="stylesheet" id="themeStylesheet" href="./style.css">
-    <!-- Font Awesome CDN for icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+    <!-- External Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
 </head>
+
 <body>
     <header>
-        <div class="logo">Portfolio</div>
-        <nav>
+        <div>
+            <a href="./index.html"><span class="logo"> MY PORTFOLIO</span></a>
+        </div>
+        <div>
             <ul>
+                <li><a href="#home">Home</a></li>
                 <li><a href="#about">About</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#contact">Contact</a></li>
+                <li><a href="#project">Project</a></li>
             </ul>
-        </nav>
+        </div>
     </header>
 
-    <section class="hero-section">
-        <h1>Welcome to <span>Saideep Nayak's Portfolio</span></h1>
-        <p>Discover my journey, skills, and projects below.</p>
-    </section>
-    <section id="about" class="about-section">
-        <h2>About Me</h2>
-        <p>Hello! I'm Saideep Nayak, a tech enthusiast skilled in Web development, Algorithms, and programming languages like C++, Python, and JavaScript. </p>
-        <div class="about-content">
+    <main>
+        <!-- Hero Section -->
+        <section class="hero-section" id="home">
+            <div>
+                <div>
+                    <h4 title="Hello, How are you?">Hi, There!👋</h4>
+                    <h2 class="hero-section__title">I'm <span>J NITHISH</span></h2>
+                    <p class="hero-section__desc">I am passionate about technology and problem-solving. Here's a glimpse of my work:</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section class="about-section" id="about">
+            <div class="about-content">
                 <h2>About Me</h2>
                 <dl>
                     <dt><b>Name</b></dt>
-                    <dd> Saideep Nayak</dd>
+                    <dd> J NITHISH </dd>
                     <dt><b>SRN</b></dt>
-                    <dd> 01FE23BCI072 </dd>
+                    <dd> 01FE23BCI069 </dd>
                     <dt><b>Course Name</b></dt>
                     <dd> Design And Analysis Of Algorithms </dd>
                     <dt><b>Course Code</b></dt>
@@ -46,50 +71,69 @@
                     <dd> DAA Course Project </dd>
                 </dl>
 
-                <h2>Skills</h2>
+                <h2>🚀 Skills</h2>
                 <ul>
                     <li><i class="fas fa-code"></i> C++, Python, JavaScript</li>
                     <li><i class="fas fa-database"></i> Data Structures and Algorithms</li>
-                    <li><i class="fas fa-laptop-code"></i> Web Development (Front End)</li>
+                    <li><i class="fas fa-laptop-code"></i> Web Development (React.js, Node.js)</li>
                 </ul>
-    </section>
 
-    <section id="projects" class="projects-section">
-        <h2>Projects</h2>
-        <div class="project-cards">
-            <div class="project-card">
-                <h3>Smart Power Distribution</h3>
-                <p>A system aimed at optimizing electricity efficiency for specific area needs, integrating sustainability and advanced workflows.</p>
-                <button onclick="window.open('#', '_blank')">View Details</button>
+                <h2>🌐 Find Me Online</h2>
+                <ul>
+                    <li><a href="https://github.com/nithish-213" target="_blank"><i class="fab fa-github"></i> GitHub</a></li>
+                    <li><a href="https://www.linkedin.com/in/nithish-j-634b112a9" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a></li>
+                </ul>
             </div>
-            <div class="project-card">
-                <h3>Dynamic Algorithms Portfolio</h3>
-                <p>An interactive portfolio showcasing algorithm case studies and implementations.</p>
-                <button onclick="window.open('https://nithish-213.github.io/DaaPortfolio.github.io/', '_blank')">View Project</button>
-            </div>
-        </div>
-    </section>
+        </section>
 
-    <section id="contact" class="contact-section">
-        <h2>Contact</h2>
-        <ul>
-            <li>
-                <i class="fab fa-github"></i>
-                <a href="https://github.com/SaideepN22" target="_blank" class="social-link">GitHub - SaideepN22</a>
-            </li>
-            <li>
-                <i class="fab fa-linkedin"></i>
-                <a href="https://shorturl.at/Bg2qd" target="_blank" class="social-link">Linkdln - Saideep Nayak</a>
-            </li>
-        </ul>
-    </section>
+        <!-- Project Section -->
+        <section class="project-section" id="project">
+            <h2>🛠️ Project</h2>
+            <div class="project-card">
+                
+                <div class="project-card-box">
+                    <div class="project-card-box__icons">
+                        <i class="fas fa-project-diagram"></i>
+                    </div>
+                    <div class="project-card-box__desc">
+                        <h3>Smart Power Distribution</h3>
+                        <p>Optimizing Electricity Efficiency for Specific Area Needs</p>
+                    </div>
+                    <div class="project-card-box__buttons">
+                        <button class="btn btn-primary">
+                            <a href="https://github.com/yourusername/project-repo" target="_blank">View on GitHub</a>
+                        </button>
+                    </div>
+                </div>
+                
+                <div class="project-card-box">
+                    <div class="project-card-box__icons">
+                        <i class="fas fa-project-diagram"></i>
+                    </div>
+                    <div class="project-card-box__desc">
+                        <h3>Dynamic Algorithms Portfolio</h3>
+                        <p>An interactive portfolio showcasing algorithm case studies and implementations.</p>
+                    </div>
+                    <div class="project-card-box__buttons">
+                        <button class="btn btn-primary">
+                            <a href="https://github.com/yourusername/project-repo" target="_blank">View on GitHub</a>
+                        </button>
+                    </div>
+                </div>
+            
+            </div>
+        </section>
+    </main>
 
     <footer>
-        <p>&copy; <span id="year"></span>  
-            <a href="https://github.com/SaideepN22" target="_blank">Saideep</a> - All Rights Reserved.
+        <p>
+            Copyright &copy; <span id="year"></span> -
+            <a href="https://github.com/nithish-213" target="_blank">Nithish</a> - All Rights Reserved.
         </p>
     </footer>
 
-    <script src="script.js"></script>
+    <!-- JS -->
+    <script src="./script.js"></script>
 </body>
+
 </html>

@@ -5,101 +5,117 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" href="./assets/img/favicon.png">
-    <title>DAA Portfolio</title>
+    <meta name="description" content="Portfolio of J Nithish, a passionate web developer skilled in web development, C++, Python, JavaScript, and algorithms.">
+    <meta name="keywords" content="J Nithish, portfolio, web developer, DAA project, KLE Technological University">
+    <meta name="author" content="J Nithish">
+    <meta property="og:title" content="J Nithish - Web Developer Portfolio">
+    <meta property="og:description" content="Explore my skills, projects, and contact details.">
+    <meta property="og:image" content="your-image-link-here.jpg">
+    <meta property="og:url" content="your-portfolio-link">
+    <title>Nithish - Portfolio</title>
 
+    <!-- Font Awesome icons -->
     <script src="https://kit.fontawesome.com/a9cdbedf57.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" id="themeStylesheet" href="./assets/css/style.css">
+
+    <!-- Styling CSS -->
+    <link rel="stylesheet" id="themeStylesheet" href="./style.css">
+
+    <!-- External Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
 </head>
 
 <body>
-
     <header>
         <div>
-            <a href="./index.html"><span class="logo">Course Project</span></a>
+            <a href="./index.html"><span class="logo">PORTFOLIO</span></a>
         </div>
         <div>
             <ul>
                 <li><a href="#home">Home</a></li>
                 <li><a href="#about">About</a></li>
                 <li><a href="#projects">Projects</a></li>
-                <li><a href="#contact">Contact</a></li>
             </ul>
         </div>
     </header>
 
     <main>
+        <!-- Hero Section -->
         <section class="hero-section" id="home">
             <div>
                 <div>
-                    <h4 title="Hello, How are you?">Hi, There!</h4>
-                    <h2 class="hero-section__title">I'm <span>Sudharsan</span></h2>
-                    <p class="hero-section__desc">I am passionate about technology and development and also about blending design aesthetics with functionality.</p>
-                </div>
-
-                <div class="hero-buttons">
-                    <button class="btn btn-dark-outlined"><a href="./assets/my resume/my resume.pdf" download>Download CV</a></button>
+                    <h4 title="Hello, How are you?">Hi, There!👋</h4>
+                    <h2 class="hero-section__title">I'm <span>Saideep Nayak</span></h2>
+                    <p class="hero-section__desc"> I am passionate about technology and evelopment and other sorts of
+                        computer related things.</p>
                 </div>
             </div>
         </section>
 
+        <!-- About Section -->
         <section class="about-section" id="about">
-            <div class="about-img">
-                <img src="assets/img/Sudharsan.jpg" alt="Sudharsan-portfolio">
-            </div>
-
             <div class="about-content">
-                <h4>About Me</h4>
-                <h2>I am UI Designer & <br> <span>Web Developer</span></h2>
-                <p>Hello there! I'm Sudharsan, a first-year student at Anna University, majoring in Computer Science...</p>
-                <button class="btn btn-primary"><a href="https://github.com/danielace1" target="_blank">Know More <i class="fa-solid fa-arrow-right-to-bracket"></i></a></button>
+                <h2>About Me</h2>
+                <dl>
+                    <dt><b>Name</b></dt>
+                    <dd> Saideep Nayak</dd>
+                    <dt><b>SRN</b></dt>
+                    <dd> 01FE23BCI072 </dd>
+                    <dt><b>Course Name</b></dt>
+                    <dd> Design And Analysis Of Algorithms </dd>
+                    <dt><b>Course Code</b></dt>
+                    <dd> 24ECAC203 </dd>
+                    <dt><b>Course Instructor</b></dt>
+                    <dd> K.M.M.Rajashekharaiah </dd>
+                    <dt><b>University</b></dt>
+                    <dd> KLE Technological University </dd>
+                    <dt><b>Portfolio Topic/Domain</b></dt>
+                    <dd> DAA Course Project </dd>
+                </dl>
+
+                <h2>Skills</h2>
+                <ul>
+                    <li><i class="fas fa-code"></i> C++, Python, JavaScript</li>
+                    <li><i class="fas fa-database"></i> Data Structures and Algorithms</li>
+                    <li><i class="fas fa-laptop-code"></i> Web Development (React.js, Node.js)</li>
+                </ul>
+
+                <h2>Contact</h2>
+                <ul>
+                    <li>
+                        <i class="fa fa-github"></i></button>
+                        <button style="font-size:20px" onclick="window.open('https://github.com/SaideepN22', '_blank')">SaideepN22
+                        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+                </li>
+                    <li>
+                        <i class="fa fa-linkedin-square"></i></button>           
+                        <button onclick="window.open('https://shorturl.at/Bg2qd')" style="font-size:20px">Saideep Nayak 
+                                       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+                               </li>
+                </ul>
             </div>
         </section>
 
+        <!-- Projects Section -->
         <section class="projects-section" id="projects">
-            <h2>My <span>Projects</span></h2>
-            <div class="projects-cards">
-                <div class="projects-card-box">
-                    <div class="projects-card-box__icons"><i class="fa-solid fa-suitcase"></i></div>
-                    <div class="projects-card-box__desc">
-                        <h4>Business Website</h4>
-                        <p>A Business website crafted using HTML, CSS, Bootstrap and JavaScript...</p>
-                    </div>
-                    <div class="projects-card-box__buttons">
-                        <button class="btn btn-dark-outlined"><a href="https://danielace1.github.io/HTML-CSS/Business%20-%20Bluu/" target="_blank">View <i class="fa-solid fa-external-link"></i></a></button>
-                    </div>
-                </div>
-                <div class="projects-card-box">
-                    <div class="projects-card-box__icons"><i class="fa-solid fa-music"></i></div>
-                    <div class="projects-card-box__desc">
-                        <h4>Music Player</h4>
-                        <p>A music player built with HTML, CSS, and JavaScript...</p>
-                    </div>
-                    <div class="projects-card-box__buttons">
-                        <button class="btn btn-dark-outlined"><a href="https://danielace1.github.io/Web-Apps/SoundSphere%20-Music%20Player/" target="_blank">View <i class="fa-solid fa-external-link"></i></a></button>
-                    </div>
-                </div>
+            <h2>Projects</h2>
+            <div class="project-card">
+                <h3>Smart Power Distribution</h3>
+                <p>A smart city system built to prioritize
+                    sustainability, efficiency, and comfort, seamlessly blending advanced
+                    workflows to elevate urban living and optimizing Electricity Efficiency for Specific Area Needs</p>
             </div>
         </section>
-
-        <section class="contact-section" id="contact">
-            <h2>Contact <span>ME!</span></h2>
-            <form action="">
-                <div><input type="text" name="name" placeholder="FullName" required></div>
-                <div><input type="email" name="email" placeholder="Email" required></div>
-                <div><textarea name="message" placeholder="Type Message" rows="5"></textarea></div>
-                <div><button class="btn btn-primary">SEND MESSAGE</button></div>
-            </form>
-        </section>
-
     </main>
 
     <footer>
-        <p>Copyright &copy; 2023 - <a href="https://github.com/danielace1" target="_blank">Sudharsan</a> - All Rights Reserved.</p>
+        <p>
+            Copyright &copy; <span id="year"></span> -
+            <a href="https://github.com/SaideepN22 target="_blank">Saideep</a> - All Rights Reserved.
+        </p>
     </footer>
 
-    <script src="./assets/js/script.js"></script>
-
+    <!-- JS -->
+    <script src="./script.js"></script>
 </body>
 
 </html>

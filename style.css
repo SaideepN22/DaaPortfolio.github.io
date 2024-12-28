@@ -1,22 +1,30 @@
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;600;700&display=swap");
 
+/* Global variables */
 :root {
-    --primary-color: #12bdff;
-    --background-color: #1e1e1e;
-    --text-color: #ffffff;
-    --hover-color: #0c8ec2;
-    --link-color: #4caf50; /* Changed color for links */
+  --primary: #12bdff; /* Primary color */
+  --primary-hover: #0c8ec2; /* Hover color */
+  --dark-primary: #1b1f24; /* Dark background color */
+  --light-primary: #fff; /* Light color */
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 body {
-    margin: 0;
-    font-family: "Poppins", sans-serif;
-    background-color: var(--background-color);
-    color: var(--text-color);
-    scroll-behavior: smooth;
-    padding-top: 80px; /* Adjust padding to prevent header overlap */
+  font-family: "Poppins", sans-serif;
+  background-color: var(--dark-primary); /* Set dark background for the body */
+  color: #fff; /* Default text color */
 }
 
+/* Header */
 header {
   position: fixed;
   top: 0;
@@ -62,132 +70,245 @@ header ul li a:hover {
   background: none; /* Ensure no background is added */
 }
 
-.hero-section {
-    text-align: center;
-    padding: 100px 20px;
-    background: var(--background-color);
-    color: var(--text-color);
-    margin-top: 80px; /* Ensure that the content is below the header */
+/* Hero Section */
+section.hero-section {
+  background-color: var(--dark-primary);
+  color: #fff;
+  display: flex;
+  align-items: center;
+  padding: 100px 120px 50px 200px;
 }
 
-.hero-section h1 {
-    font-size: 36px;
+.hero-section__title {
+  font-size: 48px;
 }
 
-.hero-section span {
-    color: var(--primary-color);
+.hero-section__title span {
+  color: var(--primary);
 }
 
-.hero-section p {
-    font-size: 20px;
-    margin-top: 20px;
+.hero-section__desc {
+  color: #c4c4c4;
 }
 
-.about-section, .projects-section, .contact-section {
-    padding: 60px 20px;
-    background: var(--background-color);
-    color: var(--text-color);
+.hero-img img {
+  margin-left: 30px;
+  border-radius: 15px;
 }
 
-.projects-section .project-cards {
-    display: flex;
-    gap: 20px;
-    justify-content: center;
-    flex-wrap: wrap;
+.hero-buttons button {
+  margin-right: 10px;
 }
 
-.project-card {
-    background: #2c2c2c;
-    padding: 20px;
-    border-radius: 10px;
-    text-align: center;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
-    transition: transform 0.3s, box-shadow 0.3s;
-    width: calc(33.33% - 20px);
+.hero-buttons button > a {
+  text-decoration: none;
+  color: #fff;
 }
 
-.project-card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.5);
+/* buttons */
+.btn {
+  padding: 10px 20px;
+  border-radius: 2px;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease 0s;
 }
 
-.contact-section ul {
-    list-style: none;
-    padding: 0;
-    display: flex;
-    gap: 20px;
-    justify-content: center;
+.btn.btn-primary {
+  background-color: var(--primary);
+  color: var(--dark-primary);
+  font-weight: 600;
 }
 
-.contact-section ul li a {
-    color: var(--link-color);
-    font-size: 18px;
-    text-decoration: none;
-    display: flex;
-    align-items: center;
-    gap: 10px;
+.btn.btn-primary:hover {
+  background-color: var(--primary-hover);
+  transition: all 0.3s ease 0s;
 }
 
-.contact-section ul li a:hover {
-    color: var(--primary-color);
+/* About Section */
+section.about-section {
+  padding: 40px 20px;
+  background-color: var(--dark-primary); /* Unified dark background */
+  color: #fff; /* Text color for better contrast */
 }
 
+.about-content {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #22282f; /* Slightly lighter dark background */
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.about-section h2 {
+  margin-top: 30px;
+  margin-bottom: 15px;
+  font-size: 24px;
+  font-weight: bold;
+  color: var(--primary); /* Highlighted headings */
+}
+
+.about-section dl {
+  margin-bottom: 40px;
+}
+
+.about-section dt {
+  font-weight: bold;
+  margin-bottom: 8px;
+  color: #c4c4c4;
+}
+
+.about-section dd {
+  margin-bottom: 20px;
+  padding-left: 10px;
+}
+
+.about-section ul {
+  list-style-type: none;
+  padding: 0;
+  margin-bottom: 30px;
+}
+
+.about-section ul li {
+  margin-bottom: 15px;
+}
+
+.about-section ul li a {
+  text-decoration: none;
+  color: #fff; /* Set the link color to white */
+  font-weight: 500;
+  padding: 0; /* Remove padding */
+  border: none; /* Remove border */
+  background: none; /* Remove background */
+  transition: none; /* Remove transition */
+}
+
+.about-section ul li a:hover {
+  color: var(--primary); /* Change text color on hover */
+  background: none; /* Ensure no background is added */
+}
+
+.about-section ul li i {
+  margin-right: 10px;
+}
+
+/* Projects Section */
+section.projects-section {
+  background-color: var(--dark-primary);
+  color: #fff;
+  padding: 50px 120px;
+}
+
+.projects-section h2 {
+  font-size: 28px;
+  text-align: center;
+}
+
+.projects-section h2 > span {
+  color: var(--primary);
+}
+
+.projects-cards {
+  display: flex;
+}
+
+.projects-card-box {
+  width: 33.33%;
+  margin: 35px 10px;
+  padding: 33px;
+  background-color: #22282f;
+  border-radius: 5px;
+  transition: all 0.5s ease 0s;
+}
+
+.projects-card-box:hover {
+  box-shadow: 3px 5px 20px #03506e;
+  transition: all 0.5s ease 0s;
+  transform: translateY(-2px);
+}
+
+.projects-card-box__icons > i {
+  font-size: 30px;
+  border-radius: 50%;
+  border: 1px solid var(--primary);
+  padding: 20px;
+}
+
+.projects-card-box:hover .projects-card-box__icons > i {
+  color: var(--primary);
+  background-color: var(--dark-primary);
+  transition: all 0.5s ease 0s;
+}
+
+.projects-card-box__desc h4 {
+  font-size: 18px;
+  margin: 18px 0 10px 0;
+}
+
+.projects-card-box__desc p {
+  font-size: 14px;
+  color: #c4c4c4;
+}
+
+.projects-card-box__buttons {
+  margin-top: 25px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.projects-card-box__buttons button {
+  background-color: #22282f;
+}
+
+.projects-card-box__buttons button > a {
+  text-decoration: none;
+  font-size: 13px;
+  color: #fff;
+}
+
+/* Footer */
 footer {
-    text-align: center;
-    padding: 20px;
-    background: var(--background-color);
-    color: gray;
-    font-size: 0.9em;
+  background-color: var(--dark-primary);
+  color: gray;
+  text-align: center;
+  padding: 15px 0;
+  font-size: 13px;
 }
 
 footer a {
-    color: var(--primary-color);
-    text-decoration: none;
+  text-decoration: none;
+  color: var(--primary);
 }
 
-footer a:hover {
-    color: var(--hover-color);
+/* Modify GitHub and LinkedIn links to remove button-like styling */
+header ul li a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 600;
+  padding: 0; /* Remove padding */
+  border: none; /* Remove border */
+  background: none; /* Remove background */
+  transition: none; /* Remove transition */
 }
 
-/* Media queries for responsiveness */
-@media (max-width: 768px) {
-    header {
-        padding: 15px 20px;
-    }
-
-    .hero-section {
-        padding: 80px 20px;
-    }
-
-    .project-cards {
-        flex-direction: column;
-        gap: 15px;
-    }
-
-    .project-card {
-        width: 100%;
-    }
+header ul li a:hover {
+  color: var(--primary); /* Change text color on hover */
+  background: none; /* Ensure no background is added */
 }
 
-@media (max-width: 480px) {
-    header .logo {
-        font-size: 1.2em;
-    }
+.about-section ul li a {
+  text-decoration: none;
+  color: #fff; /* Set the link color to white */
+  font-weight: 500;
+  padding: 0; /* Remove padding */
+  border: none; /* Remove border */
+  background: none; /* Remove background */
+  transition: none; /* Remove transition */
+}
 
-    header nav ul {
-        flex-direction: column;
-        gap: 10px;
-    }
-
-    .hero-section h1 {
-        font-size: 2em;
-    }
-
-    .about-section, .projects-section, .contact-section {
-        padding: 40px 10px;
-    }
-
-    .project-card {
-        width: 100%;
-    }
+.about-section ul li a:hover {
+  color: var(--primary); /* Change text color on hover */
+  background: none; /* Ensure no background is added */
 }

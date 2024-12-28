@@ -1,20 +1,53 @@
-// Dynamic year update
-const yearSpan = document.getElementById("year");
-const currentYear = new Date().getFullYear();
-yearSpan.textContent = currentYear;
+document.addEventListener("DOMContentLoaded", function () {
+    // Set the current year dynamically in the footer
+    const yearElement = document.getElementById("year");
+    if (yearElement) {
+        yearElement.textContent = new Date().getFullYear();
+    }
 
-// Smooth scrolling for navigation
-const navLinks = document.querySelectorAll("header ul li a");
-navLinks.forEach(link => {
-    link.addEventListener("click", function (event) {
-        event.preventDefault(); // Prevent default anchor link behavior
-        const targetId = this.getAttribute("href").slice(1); // Get the target section ID
-        const targetElement = document.getElementById(targetId);
+    // Smooth scrolling for navigation links using event delegation
+    const headerNav = document.querySelector("header ul");
+    if (headerNav) {
+        headerNav.addEventListener("click", function (e) {
+            if (e.target.tagName === 'A') {
+                e.preventDefault();
+                const targetId = e.target.getAttribute("href")?.substring(1);
+                const targetElement = document.getElementById(targetId);
 
-        // Scroll to the target element with a smooth animation
-        window.scrollTo({
-            top: targetElement.offsetTop - 60, // Adjust offset if needed for header height
-            behavior: "smooth", // Enable smooth scrolling
+                if (targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 50, // Adjust for header height
+                        behavior: "smooth",
+                    });
+                }
+            }
+        });
+    }
+
+    // Expandable project cards functionality
+    const projectCards = document.querySelectorAll(".project-card");
+    projectCards.forEach((card) => {
+        card.addEventListener("click", function () {
+            this.classList.toggle("expanded");
+        });
+    });
+
+    // Alert for external links
+    const externalLinks = document.querySelectorAll('a[target="_blank"]');
+    externalLinks.forEach((link) => {
+        link.addEventListener("click", function (e) {
+            if (!confirm("You are about to visit an external site. Continue?")) {
+                e.preventDefault();
+            }
+        });
+    });
+
+    // Project buttons functionality (if buttons are inside project cards)
+    const projectButtons = document.querySelectorAll('.projects-card-box__buttons button');
+    projectButtons.forEach((button) => {
+        button.addEventListener('click', () => {
+            console.log('Project Button Clicked');
+            // Add functionality here, such as opening links or displaying more details
         });
     });
 });

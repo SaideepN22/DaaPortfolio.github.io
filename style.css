@@ -52,22 +52,38 @@ header ul {
 }
 
 header ul li {
-  margin-right: 30px;
+  margin-left: 30px;
 }
 
 header ul li a {
   color: #fff;
   text-decoration: none;
   font-weight: 600;
-  padding: 0; /* Remove padding */
-  border: none; /* Remove border */
-  background: none; /* Remove background */
-  transition: none; /* Remove transition */
 }
 
 header ul li a:hover {
   color: var(--primary); /* Change text color on hover */
-  background: none; /* Ensure no background is added */
+}
+
+@media (max-width: 576px) {
+  header {
+    flex-direction: column;
+    padding: 15px;
+  }
+
+  header .logo {
+    margin-right: 0;
+    text-align: center;
+  }
+
+  header ul {
+    flex-direction: column;
+    margin-top: 10px;
+  }
+
+  header ul li {
+    margin: 5px 0;
+  }
 }
 
 /* Hero Section */
@@ -76,11 +92,19 @@ section.hero-section {
   color: #fff;
   display: flex;
   align-items: center;
+  justify-content: space-between;
   padding: 100px 120px 50px 200px;
+  flex-wrap: wrap;
+}
+
+.hero-section__content {
+  flex: 1;
+  max-width: 600px;
+  margin-right: 20px;
 }
 
 .hero-section__title {
-  font-size: 48px;
+  font-size: clamp(32px, 5vw, 48px);
 }
 
 .hero-section__title span {
@@ -92,7 +116,8 @@ section.hero-section {
 }
 
 .hero-img img {
-  margin-left: 30px;
+  max-width: 100%;
+  height: auto;
   border-radius: 15px;
 }
 
@@ -105,38 +130,36 @@ section.hero-section {
   color: #fff;
 }
 
-/* buttons */
-.btn {
-  padding: 10px 20px;
-  border-radius: 2px;
-  border: none;
-  cursor: pointer;
-  transition: all 0.3s ease 0s;
+@media (max-width: 992px) {
+  section.hero-section {
+    padding: 80px 20px;
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  .hero-section__content {
+    margin: 0 0 20px 0;
+  }
 }
 
-.btn.btn-primary {
-  background-color: var(--primary);
-  color: var(--dark-primary);
-  font-weight: 600;
-}
-
-.btn.btn-primary:hover {
-  background-color: var(--primary-hover);
-  transition: all 0.3s ease 0s;
+@media (max-width: 576px) {
+  section.hero-section {
+    padding: 50px 15px;
+  }
 }
 
 /* About Section */
 section.about-section {
   padding: 40px 20px;
-  background-color: var(--dark-primary); /* Unified dark background */
-  color: #fff; /* Text color for better contrast */
+  background-color: var(--dark-primary);
+  color: #fff;
 }
 
 .about-content {
   max-width: 800px;
   margin: 0 auto;
   padding: 20px;
-  background-color: #22282f; /* Slightly lighter dark background */
+  background-color: #22282f;
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
@@ -144,9 +167,17 @@ section.about-section {
 .about-section h2 {
   margin-top: 30px;
   margin-bottom: 15px;
-  font-size: 24px;
-  font-weight: bold;
-  color: var(--primary); /* Highlighted headings */
+  text-align: center;
+  font-size: clamp(20px, 4vw, 28px);
+  color: var(--primary);
+}
+
+.about-section h3 {
+  margin-top: 20px;
+  margin-bottom: 10px;
+  
+  font-size: 22px; /* Smaller size for Skills heading */
+  color: var(--primary);
 }
 
 .about-section dl {
@@ -176,96 +207,174 @@ section.about-section {
 
 .about-section ul li a {
   text-decoration: none;
-  color: #fff; /* Set the link color to white */
+  color: #fff;
   font-weight: 500;
-  padding: 0; /* Remove padding */
-  border: none; /* Remove border */
-  background: none; /* Remove background */
-  transition: none; /* Remove transition */
 }
 
 .about-section ul li a:hover {
-  color: var(--primary); /* Change text color on hover */
-  background: none; /* Ensure no background is added */
+  color: var(--primary);
 }
 
 .about-section ul li i {
   margin-right: 10px;
 }
 
-/* Projects Section */
-section.projects-section {
+@media (max-width: 576px) {
+  .about-content {
+    padding: 15px;
+  }
+}
+
+/* Project Section */
+section.project-section {
+  padding: 50px 20px;
   background-color: var(--dark-primary);
   color: #fff;
-  padding: 50px 120px;
 }
 
-.projects-section h2 {
-  font-size: 28px;
+.project-section h2 {
+  margin-top: 30px;
+  margin-bottom: 15px;
   text-align: center;
-}
-
-.projects-section h2 > span {
+  font-size: clamp(20px, 4vw, 28px);
   color: var(--primary);
 }
 
-.projects-cards {
+.project-cards {
   display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 20px;
 }
 
-.projects-card-box {
-  width: 33.33%;
-  margin: 35px 10px;
-  padding: 33px;
+.project-card-box {
+  flex: 1 1 calc(50% - 20px);
   background-color: #22282f;
-  border-radius: 5px;
-  transition: all 0.5s ease 0s;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  text-align: center;
 }
 
-.projects-card-box:hover {
-  box-shadow: 3px 5px 20px #03506e;
+.project-card-box:hover {
+  transform: translateY(-5px);
   transition: all 0.5s ease 0s;
-  transform: translateY(-2px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
 }
 
-.projects-card-box__icons > i {
+.project-card-box__icons > i {
   font-size: 30px;
+  color: var(--primary);
   border-radius: 50%;
   border: 1px solid var(--primary);
   padding: 20px;
 }
 
-.projects-card-box:hover .projects-card-box__icons > i {
+.project-card-box:hover .projects-card-box__icons > i {
   color: var(--primary);
   background-color: var(--dark-primary);
   transition: all 0.5s ease 0s;
 }
 
-.projects-card-box__desc h4 {
+.project-card-box__desc h4 {
   font-size: 18px;
   margin: 18px 0 10px 0;
 }
 
-.projects-card-box__desc p {
-  font-size: 14px;
+.project-card-box__desc p {
   color: #c4c4c4;
+  font-size: 14px;
 }
 
-.projects-card-box__buttons {
-  margin-top: 25px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.projects-card-box__buttons button {
-  background-color: #22282f;
-}
-
-.projects-card-box__buttons button > a {
+.project-card-box__buttons a {
+  display: inline-block;
+  padding: 6px 12px;
+  background-color: var(--primary); /* Button background color */
+  color: var(--light-primary); /* Button text color */
+  font-size: 12px;
+  font-weight: 600;
   text-decoration: none;
-  font-size: 13px;
+  border-radius: 4px; /* Rounded corners */
+  transition: all 0.3s ease; /* Smooth transition effect */
+  box-shadow: 0 3px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow for button */
+}
+
+.project-card-box__buttons a:hover {
+  background-color: var(--primary-hover); /* Darker shade on hover */
+  color: var(--light-primary); /* Ensure text remains readable */
+  transform: translateY(-2px); /* Slight lift effect on hover */
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2); /* Enhanced shadow on hover */
+}
+
+@media (max-width: 992px) {
+  .project-cards {
+    flex-direction: column;
+    gap: 30px;
+  }
+}
+
+@media (max-width: 768px) {
+  .project-card-box__buttons a {
+    padding: 8px 16px;
+    font-size: 14px;
+  }
+}
+
+/* Contact Section */
+section.contact-section {
+  padding: 40px 20px;
+  background-color: var(--dark-primary);
   color: #fff;
+}
+
+.contact-section h2 {
+  margin-top: 30px;
+  margin-bottom: 15px;
+  font-size: clamp(20px, 4vw, 28px);
+  font-weight: bold;
+  color: var(--primary);
+  text-align: center;
+}
+
+.contact-content {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #22282f;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.contact-content ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 20px 0 0 0;
+}
+
+.contact-content ul li {
+  margin-bottom: 15px;
+  text-align: left;
+}
+
+.contact-content ul li a {
+  text-decoration: none;
+  color: #fff;
+  font-weight: 500;
+}
+
+.contact-content ul li a:hover {
+  color: var(--primary);
+}
+
+.contact-content ul li i {
+  margin-right: 10px;
+}
+
+@media (max-width: 576px) {
+  .contact-content {
+    padding: 15px;
+  }
 }
 
 /* Footer */
@@ -278,37 +387,16 @@ footer {
 }
 
 footer a {
-  text-decoration: none;
   color: var(--primary);
-}
-
-/* Modify GitHub and LinkedIn links to remove button-like styling */
-header ul li a {
-  color: #fff;
   text-decoration: none;
-  font-weight: 600;
-  padding: 0; /* Remove padding */
-  border: none; /* Remove border */
-  background: none; /* Remove background */
-  transition: none; /* Remove transition */
 }
 
-header ul li a:hover {
-  color: var(--primary); /* Change text color on hover */
-  background: none; /* Ensure no background is added */
+footer a:hover {
+  text-decoration: underline;
 }
 
-.about-section ul li a {
-  text-decoration: none;
-  color: #fff; /* Set the link color to white */
-  font-weight: 500;
-  padding: 0; /* Remove padding */
-  border: none; /* Remove border */
-  background: none; /* Remove background */
-  transition: none; /* Remove transition */
-}
-
-.about-section ul li a:hover {
-  color: var(--primary); /* Change text color on hover */
-  background: none; /* Ensure no background is added */
+@media (max-width: 576px) {
+  footer {
+    font-size: 12px;
+  }
 }

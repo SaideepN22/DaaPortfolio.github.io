@@ -2,10 +2,10 @@
 
 /* Global variables */
 :root {
-  --primary: #12bdff; /* Primary color */
-  --primary-hover: #0c8ec2; /* Hover color */
-  --dark-primary: #1b1f24; /* Dark background color */
-  --light-primary: #fff; /* Light color */
+  --primary: #636363; /* Primary color (lighter grey) */
+  --primary-hover: #4e4e4e; /* Hover color (darker grey) */
+  --dark-primary: #181818; /* Dark background color */
+  --light-primary: #f0f0f0; /* Light color (off-white) */
 }
 
 * {
@@ -21,7 +21,7 @@ html {
 body {
   font-family: "Poppins", sans-serif;
   background-color: var(--dark-primary); /* Set dark background for the body */
-  color: #fff; /* Default text color */
+  color: #f0f0f0; /* Default text color */
 }
 
 /* Header */
@@ -56,7 +56,7 @@ header ul li {
 }
 
 header ul li a {
-  color: #fff;
+  color: #f0f0f0;
   text-decoration: none;
   font-weight: 600;
 }
@@ -89,7 +89,7 @@ header ul li a:hover {
 /* Hero Section */
 section.hero-section {
   background-color: var(--dark-primary);
-  color: #fff;
+  color: #f0f0f0;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -152,7 +152,7 @@ section.hero-section {
 section.about-section {
   padding: 40px 20px;
   background-color: var(--dark-primary);
-  color: #fff;
+  color: #f0f0f0;
 }
 
 .about-content {
@@ -207,7 +207,7 @@ section.about-section {
 
 .about-section ul li a {
   text-decoration: none;
-  color: #fff;
+  color: #f0f0f0;
   font-weight: 500;
 }
 
@@ -229,7 +229,7 @@ section.about-section {
 section.project-section {
   padding: 50px 20px;
   background-color: var(--dark-primary);
-  color: #fff;
+  color: #f0f0f0;
 }
 
 .project-section h2 {
@@ -325,7 +325,7 @@ section.project-section {
 section.contact-section {
   padding: 40px 20px;
   background-color: var(--dark-primary);
-  color: #fff;
+  color: #f0f0f0;
 }
 
 .contact-section h2 {
@@ -359,7 +359,7 @@ section.contact-section {
 
 .contact-content ul li a {
   text-decoration: none;
-  color: #fff;
+  color: #f0f0f0;
   font-weight: 500;
 }
 
@@ -376,32 +376,34 @@ section.contact-section {
     padding: 15px;
   }
 }
-/*Toggle Button*/
+
+/* Toggle Button */
 .toggle-btn {
-        background-color: #4CAF50;
-        color: black;
-        padding: 10px 15px;
-        text-align: center;
-        text-decoration: none;
-        display: inline-block;
-        font-size: 16px;
-        cursor: pointer;
-        border: none;
-        margin: 5px;
-        border-radius: 5px;
-    }
+  background-color: #acacac;
+  color: black;
+  padding: 10px 15px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  cursor: pointer;
+  border: none;
+  margin: 5px;
+  border-radius: 5px;
+}
 
-    .toggle-btn:hover {
-        background-color: #45a049;
-    }
+.toggle-btn:hover {
+  background-color: #4e4e4e;
+}
 
-    .code {
-        background-color: #000000;
-        padding: 15px;
-        border-radius: 5px;
-        font-family: monospace;
-        margin-top: 10px;
-    }
+.code {
+  background-color: #000000;
+  padding: 15px;
+  border-radius: 5px;
+  font-family: monospace;
+  margin-top: 10px;
+}
+
 /* Footer */
 footer {
   background-color: var(--dark-primary);

@@ -376,7 +376,32 @@ section.contact-section {
     padding: 15px;
   }
 }
+/*Toggle Button*/
+.toggle-btn {
+        background-color: #4CAF50;
+        color: white;
+        padding: 10px 15px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+        cursor: pointer;
+        border: none;
+        margin: 5px;
+        border-radius: 5px;
+    }
 
+    .toggle-btn:hover {
+        background-color: #45a049;
+    }
+
+    .code {
+        background-color: #f4f4f4;
+        padding: 15px;
+        border-radius: 5px;
+        font-family: monospace;
+        margin-top: 10px;
+    }
 /* Footer */
 footer {
   background-color: var(--dark-primary);
